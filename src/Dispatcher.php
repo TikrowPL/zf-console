@@ -27,7 +27,7 @@ class Dispatcher implements DispatcherInterface
      * @param null|ContainerInterface $container Container from which to pull
      *     command services when dispatching.
      */
-    public function __construct(ContainerInterface $container = null)
+    public function __construct(?ContainerInterface $container = null)
     {
         $this->container = $container;
     }

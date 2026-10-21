@@ -29,7 +29,7 @@ class RouteCollection implements Countable, IteratorAggregate, RouteMatcherInter
      *
      * @return int
      */
-    public function count()
+    public function count(): int
     {
         return count($this->routes);
     }
@@ -39,7 +39,7 @@ class RouteCollection implements Countable, IteratorAggregate, RouteMatcherInter
      *
      * @return SplStack
      */
-    public function getIterator()
+    public function getIterator(): \Traversable
     {
         return new ArrayIterator($this->routes);
     }
@@ -218,7 +218,7 @@ class RouteCollection implements Countable, IteratorAggregate, RouteMatcherInter
      * @return array|null
      * @throws DomainException
      */
-    protected function prepareFilters(array $filters = null)
+    protected function prepareFilters(?array $filters = null)
     {
         if (null === $filters) {
             return null;
@@ -262,7 +262,7 @@ class RouteCollection implements Countable, IteratorAggregate, RouteMatcherInter
      * @return array|null
      * @throws DomainException
      */
-    protected function prepareValidators(array $validators = null)
+    protected function prepareValidators(?array $validators = null)
     {
         if (null === $validators) {
             return null;

@@ -90,8 +90,8 @@ class Application
         $name,
         $version,
         $routes,
-        Console $console = null,
-        DispatcherInterface $dispatcher = null
+        ?Console $console = null,
+        ?DispatcherInterface $dispatcher = null
     ) {
         if (! is_array($routes) && ! $routes instanceof Traversable) {
             throw new InvalidArgumentException('Routes must be provided as an array or Traversable object');
@@ -155,7 +155,7 @@ class Application
      * @param array $args
      * @return int
      */
-    public function run(array $args = null)
+    public function run(?array $args = null)
     {
         $this->initializeExceptionHandler();
         $this->setProcessTitle();

@@ -54,8 +54,8 @@ class Route extends DefaultRouteMatcher
         array $constraints = [],
         array $defaults = [],
         array $aliases = [],
-        array $filters = null,
-        array $validators = null
+        ?array $filters = null,
+        ?array $validators = null
     ) {
         $this->name = $name;
         $this->route = $route;
